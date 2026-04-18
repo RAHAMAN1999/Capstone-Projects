@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <main>
+    <header>
+      <h1>RPS</h1>
+      <p class="subtitle">Rock · Paper · Scissors</p>
+    </header>
+
+    <section class="scoreboard">
+      <div class="score-block">
+        <span class="score-label">YOU</span>
+        <span class="score-value" id="score-user">0</span>
+      </div>
+      <div class="score-divider">vs</div>
+      <div class="score-block">
+        <span class="score-label">CPU</span>
+        <span class="score-value" id="score-cpu">0</span>
+      </div>
+    </section>
+
+    <section class="arena" id="arena">
+      <div class="choice-display" id="user-display">
+        <span class="choice-emoji" id="user-emoji">?</span>
+        <span class="choice-label">Your pick</span>
+      </div>
+      <div class="result-badge" id="result-badge"></div>
+      <div class="choice-display" id="cpu-display">
+        <span class="choice-emoji" id="cpu-emoji">?</span>
+        <span class="choice-label">CPU pick</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button class="btn" data-choice="rock" aria-label="Rock">✊</button>
+      <button class="btn" data-choice="paper" aria-label="Paper">✋</button>
+      <button class="btn" data-choice="scissors" aria-label="Scissors">✌️</button>
+    </section>
+
+    <p class="error-msg" id="error-msg"></p>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
